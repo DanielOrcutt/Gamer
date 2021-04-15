@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorButton: UIButton!
+    @IBOutlet weak var lizardButton: UIButton!
+    @IBOutlet weak var spockButton: UIButton!
     
     @IBOutlet weak var playAgain: UIButton!
     
@@ -39,6 +41,14 @@ class ViewController: UIViewController {
         player(userSign: .scissors)
     }
     
+    @IBAction func lizardChosen(_ sender: Any) {
+        player(userSign: .lizard)
+    }
+    
+    @IBAction func spockChosen(_ sender: Any) {
+        player(userSign: .spock)
+    }
+    
     @IBAction func playAgainTapped(_ sender: Any) {
         updateUI(forState: .start)
     }
@@ -58,10 +68,15 @@ class ViewController: UIViewController {
             rockButton.isHidden = false
             paperButton.isHidden = false
             scissorButton.isHidden = false
+            lizardButton.isHidden = false
+            spockButton.isHidden = false
             
             rockButton.isEnabled = true
             paperButton.isEnabled = true
             scissorButton.isEnabled = true
+            lizardButton.isEnabled = true
+            spockButton.isEnabled = true
+            
         case .win:
             view.backgroundColor = UIColor(red: 0.651, green: 0.792, blue: 0.651, alpha: 1)
         case .lose:
@@ -84,10 +99,14 @@ class ViewController: UIViewController {
         rockButton.isHidden = true
         paperButton.isHidden = true
         scissorButton.isHidden = true
+        lizardButton.isHidden = true
+        spockButton.isHidden = true
         
         rockButton.isEnabled = false
         paperButton.isEnabled = false
         scissorButton.isEnabled = false
+        lizardButton.isEnabled = false
+        spockButton.isEnabled = false
         
         switch userSign {
         case .rock:
@@ -96,6 +115,10 @@ class ViewController: UIViewController {
             paperButton.isHidden = false
         case .scissors:
             scissorButton.isHidden = false
+        case .lizard:
+            lizardButton.isHidden = false
+        case .spock:
+            spockButton.isHidden = false
         }
         
         playAgain.isHidden = false

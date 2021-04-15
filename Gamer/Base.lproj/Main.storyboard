@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="g2o-E1-9w8">
-                                <rect key="frame" x="56.5" y="260.5" width="301" height="375.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="g2o-E1-9w8">
+                                <rect key="frame" x="56.5" y="252.5" width="301" height="391.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uba-cp-57s">
-                                        <rect key="frame" x="117.5" y="0.0" width="66.5" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="295-y6-sP9">
-                                        <rect key="frame" x="0.0" y="133.5" width="301" height="96"/>
+                                        <rect key="frame" x="0.0" y="73.5" width="301" height="96"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvF-lP-Lqm">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="96"/>
@@ -54,8 +54,29 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="cJX-fX-MSe">
+                                        <rect key="frame" x="0.0" y="209.5" width="301" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2U-Mf-8FQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="96"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                                <state key="normal" title="🦎"/>
+                                                <connections>
+                                                    <action selector="lizardChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgb-Zm-FXp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-aq-CJK">
+                                                <rect key="frame" x="195.5" y="0.0" width="105.5" height="96"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                                <state key="normal" title="🖖"/>
+                                                <connections>
+                                                    <action selector="spockChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2b-uS-G2J"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPW-gi-cu3">
-                                        <rect key="frame" x="80" y="329.5" width="141" height="46"/>
+                                        <rect key="frame" x="0.0" y="345.5" width="301" height="46"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <state key="normal" title="Play Again?"/>
                                         <connections>
@@ -65,7 +86,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1a-TB-PG3">
-                                <rect key="frame" x="126" y="104" width="162" height="66.5"/>
+                                <rect key="frame" x="126" y="104" width="162" height="58.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,15 +101,18 @@
                             <constraint firstItem="g2o-E1-9w8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="J1a-TB-PG3" secondAttribute="bottom" constant="90" id="bqH-f5-I9M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J1a-TB-PG3" secondAttribute="trailing" constant="126" id="rng-8M-zfm"/>
                             <constraint firstItem="J1a-TB-PG3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="vOv-KW-c4s"/>
+                            <constraint firstItem="J1a-TB-PG3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vjB-aj-C8d"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="SignLabel" destination="J1a-TB-PG3" id="JVj-qM-d3Z"/>
+                        <outlet property="lizardButton" destination="M2U-Mf-8FQ" id="5J0-ne-207"/>
                         <outlet property="paperButton" destination="bcH-Af-93u" id="0WG-Ej-wYD"/>
                         <outlet property="playAgain" destination="WPW-gi-cu3" id="bCW-8V-1Mn"/>
                         <outlet property="rockButton" destination="YvF-lP-Lqm" id="VjZ-75-ArZ"/>
                         <outlet property="scissorButton" destination="30S-pM-Eyg" id="EO4-ch-6Cn"/>
                         <outlet property="signLabel" destination="J1a-TB-PG3" id="lat-5c-oTh"/>
+                        <outlet property="spockButton" destination="DIx-aq-CJK" id="zZj-hT-vvN"/>
                         <outlet property="statusLabel" destination="Uba-cp-57s" id="1Nn-aS-5sV"/>
                     </connections>
                 </viewController>
